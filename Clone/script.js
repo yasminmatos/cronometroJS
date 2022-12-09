@@ -74,16 +74,9 @@ function pararContagem() {
 let aux = 0; //vai ajudar a verificar se é a primeira vez que ele clica em start
 
 start.addEventListener('click', function () {
-    //quando clicar em "start", a aux recebe 1, indicando que foi
-    //clicado pelo menos uma vez
-    aux ++;
-    //vai impedir que ele "adicione" o parametro sempre que clicar na função, não mudando a
-    //contagem
-    if(!(aux > 1)){
-        contagemInicial = setInterval(passaSegundos, 1000, 1);
-        setInterval(passarMinutos, 60000, 1);
-        setInterval(passarHoras, 3600000, 1)
-    } 
+    contagemInicial = setInterval(passaSegundos, 1000, 1);
+    setInterval(passarMinutos, 60000, 1);
+    setInterval(passarHoras, 3600000, 1)
 });
 
 parar.addEventListener('click', pararContagem);
