@@ -1,0 +1,91 @@
+##Anotações importantes:
+
+-- O minuto está mudando 2s depois do previsto
+-- Falta verificar a quantidade de algarismos em horas e minutos
+-- A div está se adaptando ao tamanho do elemento p
+
+##Faltando: 
+- Pausar()
+- Resetar()
+
+##Verificar lógica antiga para descobrir o erro:
+
+===================================== ! Começa aqui
+
+let cronometro = document.querySelector('cronometro');
+
+let horas = document.querySelector('.horas');
+let minutos = document.querySelector('.pMinutos');
+let segundos = document.querySelector('.segundos');
+
+
+let start = document.querySelector('.start');
+let parar = document.querySelector('.stop');
+let reset = document.querySelector('.reset');
+
+
+let aux = false; //não clicou em parar
+let s; //segundos
+let m; //minutos
+let h; //horas
+
+function passarSegundos() {
+    s = setInterval(2);
+    console.log(s);
+    if (s > 1) {
+        let sub = s - 1;
+
+        console.log("Antes de tirar 1: ", s);
+        segundos.innerHTML = "0" + sub;
+        console.log("Depois: ", s);
+    }
+
+    //se o numero for menor que 10 (tiver 1 casa)
+    if (s < 10) {
+        //adiciona o 0 antes do numero
+        segundos.innerHTML = "0" + s;
+    } else {
+        //caindo aqui, significa que agora ele tem duas casas
+        segundos.innerHTML = s; //preenche o espaco com o próprio numero
+    }
+
+    if(s > 60){
+        //significa que passou um minuto
+        passarMinutos();
+        s = 0;
+    }
+
+}
+
+function passarMinutos(){
+    m = setInterval(0);
+
+    //se o numero for menor que 10 (tiver 1 casa)
+    if (m < 10) {
+        //adiciona o 0 antes do numero
+        minutos.innerHTML = "0" + m;
+    } else {
+        //caindo aqui, significa que agora ele tem duas casas
+        minutos.innerHTML = m; //preenche o espaco com o próprio numero
+    }
+
+    if(m > 60){
+        //significa que passou uma hora
+    }
+}
+
+start.addEventListener('click', function () {
+    if (aux == false) {
+        setInterval(passarSegundos, 1000, 1);
+    }
+
+})
+
+parar.addEventListener('click', function () {
+    aux == true;
+    if (aux == true) {
+        clearInterval(gg);
+    }
+
+})
+===================================== ! Termina aqui

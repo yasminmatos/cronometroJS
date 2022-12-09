@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Text', sans-serif;
+  
+    max-width: 1440px;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.espaco h1{
+    position: relative;
+    top: 45px;
+    left: 569px;
+    color:  hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/images/bg-stars.svg);
+    background-color:hsl(234, 17%, 12%);
+}
+
+.montanhas img{
+    position: relative;
+    top: 49vh;
+    max-width: 1440px;
+}
+
+.cronometro{
+    display: flex;
+    position: relative;
+    top: 100px;
+    left: 500px;
+}
+
+.cronometro .minutos{
+    margin: 0 50px 0 50px;
+}
+
+.cronometro div{
+    width: 100px;
+    height: 100px;
+    box-shadow:4px 8px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 3px;
+    color: hsl(345, 95%, 68%);
+    padding: 16px;
+    font-size: 52px;
+}
+
+
+.botoes button{
+    background-color: hsl(236, 21%, 26%);
+    box-shadow:3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color:  hsl(345, 95%, 68%);
+    border: none;
+    padding: 10px 33px;
+    margin: 0 20px 0 28px;
+    position: relative;
+    top: 140px;
+    left: 473px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
