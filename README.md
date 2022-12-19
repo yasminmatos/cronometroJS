@@ -17,7 +17,7 @@
 
 # 🛠️ Avisos:
 <p>
-Atenção: esse projeto não possui um design responsivo. A principal finalidade foi treinar a lógica de programação usando os conhecimentos adquiridos no módulo do curso. </p>
+Esse projeto não possui um design responsivo. A principal finalidade foi treinar a lógica de programação usando os conhecimentos adquiridos no módulo do curso. </p>
 
 <br>
 
